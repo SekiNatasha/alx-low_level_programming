@@ -12,9 +12,9 @@ int main(void)
 
 	for (hundreds = '0'; hundreds <= '9'; hundreds++)
 	{
-		for (tens = '0'; tens <= '9'; tends++)
+		for (tens = '0'; tens <= '9'; tens++)
 		{
-			for (ones = '0'; ones <= '0' ones++)
+			for (ones = '0'; ones <= '0'; ones++)
 			{
 				if (!((ones <= tens) || (tens <= hundreds)))
 				{
