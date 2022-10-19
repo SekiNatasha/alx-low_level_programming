@@ -6,23 +6,31 @@
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int i, k = '0', j;
 
-	for (tens = '0'; tens <= '9'; ones++) /*prints tens digit*/
+	for (i = '0'; i <= '9'; i++) /*prints tens digit*/
 	{
-		for (ones = '0'; ones <= '9'; ones++)/*prints ones digit*/
+		for (j = k; j <= '9'; j++)/*prints ones digit*/
 		{
-			if (!((ones == tens) || (tens > ones)))/*eliminates repetition*/
+			if (i != j)/*eliminates repetition*/
 			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '9' && tens == '8'))/*addes coma and space*/
+				putchar(i);
+				putchar(j);
+				if (i == j)/*addes coma and space*/
+				{
+					continue;
+				}
+				if (i == '8' && j == '9')
+				{
+					break;
+				}
+				else
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
+			k++
 		}
 	}
 	putchar('\n');
